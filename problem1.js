@@ -99,3 +99,9 @@ const rawApiData = [
 ];
 
 //? Output => [{ name: "Phone" }, { name: "Smart Watch" }]
+const topThreeProduct=rawApiData.filter(item=>item.category==="Electronics");
+const sortByRating=topThreeProduct.sort((a,b)=>b.rating-a.rating);
+const finalProduct=sortByRating.map((item)=>{
+   return {name:item.productName}
+})
+console.log(finalProduct)
